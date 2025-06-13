@@ -83,48 +83,48 @@ export default function Login() {
         <div className="w-full md:w-1/2 flex flex-col justify-center items-center px-8 py-14 bg-white/10 backdrop-blur-2xl">
           <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">Sign In</h3>
           <form onSubmit={handleSubmit} className="w-full max-w-xs space-y-6">
-            <div>
-              <label className="block text-white text-sm mb-1" htmlFor="email">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                value={form.email}
-                placeholder="you@example.com"
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-white text-sm mb-1" htmlFor="password">Password</label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                value={form.password}
-                placeholder="••••••••"
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={loading}
-              className={`w-full py-3 rounded-xl font-semibold transition 
-                ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-pink-500 hover:bg-pink-600'}
+          <div>
+            <label className="block text-white text-sm mb-1" htmlFor="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={form.email}
+              placeholder="you@example.com"
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+              required
+            />
+          </div>
+          <div>
+            <label className="block text-white text-sm mb-1" htmlFor="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              value={form.password}
+              placeholder="••••••••"
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+              required
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={loading}
+            className={`w-full py-3 rounded-xl font-semibold transition 
+              ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-pink-500 hover:bg-pink-600'}
                 text-white flex items-center justify-center shadow-md text-lg`}
-            >
-              {loading && (
-                <span className="mr-2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              )}
-              {loading ? 'Sending OTP...' : 'Send OTP'}
-            </button>
-          </form>
-          <p className="text-center text-sm text-white/70 mt-6">
-            Don't have an account? <Link to="/signup" className="underline hover:text-white">Sign Up</Link>
-          </p>
+          >
+            {loading && (
+              <span className="mr-2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            )}
+            {loading ? 'Sending OTP...' : 'Send OTP'}
+          </button>
+        </form>
+        <p className="text-center text-sm text-white/70 mt-6">
+          Don't have an account? <Link to="/signup" className="underline hover:text-white">Sign Up</Link>
+        </p>
         </div>
       </div>
     </div>

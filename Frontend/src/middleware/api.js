@@ -1,8 +1,7 @@
-
 import axios from 'axios';
 
 // Set base URL for axios
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://employee-authentication-mern.onrender.com";
 
 export const fetchSidebarMenus = () => axios.get("/api/sidebarmenus");
 export const fetchPermissions = () => axios.get("/api/permissions");

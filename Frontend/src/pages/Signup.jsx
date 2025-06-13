@@ -79,41 +79,41 @@ export default function Signup() {
           <h3 className="text-2xl font-bold text-white mb-8 drop-shadow-lg">Create Account</h3>
           <form onSubmit={handleSubmit} className="w-full max-w-xs space-y-6">
             <div className="grid grid-cols-1 gap-6">
-              {fields.map(({ name, label, type }) => (
+            {fields.map(({ name, label, type }) => (
                 <div key={name} className={name === 'address' ? '' : ''}>
-                  <label className="block text-white text-sm mb-1" htmlFor={name}>
-                    {label}
-                  </label>
-                  <input
-                    id={name}
-                    name={name}
-                    type={type}
-                    value={form[name]}
-                    onChange={handleChange}
-                    placeholder={`Enter your ${label.toLowerCase()}`}
+                <label className="block text-white text-sm mb-1" htmlFor={name}>
+                  {label}
+                </label>
+                <input
+                  id={name}
+                  name={name}
+                  type={type}
+                  value={form[name]}
+                  onChange={handleChange}
+                  placeholder={`Enter your ${label.toLowerCase()}`}
                     className="w-full px-4 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300 hover:bg-cyan-400/10 hover:scale-105"
-                    required
-                  />
-                </div>
-              ))}
-            </div>
-            <button
-              type="submit"
-              disabled={loading}
+                  required
+                />
+              </div>
+            ))}
+          </div>
+          <button
+            type="submit"
+            disabled={loading}
               className={`w-full py-3 rounded-xl font-semibold transition-all duration-300
                 ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-cyan-500 hover:bg-cyan-400 hover:text-cyan-900 hover:shadow-cyan-400/40 hover:scale-105'}
                 text-white flex items-center justify-center shadow-md text-lg mt-6`}
-            >
-              {loading && (
-                <span className="mr-2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              )}
-              {loading ? 'Creating Account...' : 'Create Account'}
-            </button>
-          </form>
-          <p className="text-center text-sm text-white/70 mt-6">
-            Already have an account?{' '}
-            <Link to="/login" className="underline hover:text-white">Log In</Link>
-          </p>
+          >
+            {loading && (
+              <span className="mr-2 w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            )}
+            {loading ? 'Creating Account...' : 'Create Account'}
+          </button>
+        </form>
+        <p className="text-center text-sm text-white/70 mt-6">
+          Already have an account?{' '}
+          <Link to="/login" className="underline hover:text-white">Log In</Link>
+        </p>
         </div>
       </div>
     </div>
