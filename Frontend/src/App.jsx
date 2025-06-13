@@ -23,6 +23,7 @@ const PrivateRoute = ({ children }) => {
 };
 
 function App() {
+  // Initiating frontend application component - safe modification for new commit
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(authService.isAuthenticated());
 

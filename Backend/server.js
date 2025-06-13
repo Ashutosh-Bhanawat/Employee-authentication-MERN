@@ -36,7 +36,7 @@ app.use(express.urlencoded({ extended: true }));
 // Request logging middleware
 app.use((req, res, next) => {
   console.log('-------------------------');
-  console.log('Request Details:');
+  console.log('Request Details (Backend received):');
   console.log(`Method: ${req.method}`);
   console.log(`Path: ${req.path}`);
   console.log('Headers:', req.headers);
