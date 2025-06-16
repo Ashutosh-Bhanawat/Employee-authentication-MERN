@@ -1,9 +1,1 @@
-services:
-  - type: web
-    name: auth-frontend
-    env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run preview
-    envVars:
-      - key: VITE_API_URL
-        value: https://auth-backend.onrender.com 
+ 
