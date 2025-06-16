@@ -80,7 +80,7 @@ export default function OTPVerify() {
     <div
       className="min-h-screen flex items-center justify-center relative"
       style={{
-        backgroundImage: "url('/images/home.jpg')",
+        backgroundImage: "url('/images/a.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
