@@ -24,7 +24,12 @@ const app = express();
 
 // Configure CORS
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Use environment variable for frontend URL
+  origin: [
+    process.env.FRONTEND_URL || 'http://localhost:5173',
+    'https://employee-authentication-mern-git-main-ashus-projects-b1527e08.vercel.app',
+    'https://employee-authentication-mern.vercel.app',
+    /\.vercel\.app$/
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true

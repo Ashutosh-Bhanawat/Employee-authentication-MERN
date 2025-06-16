@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://employee-authentication-mern.onrender.com/api/auth';
 
 // Configure axios defaults
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -172,4 +172,4 @@ export const authService = {
   getUserEmail: () => {
     return localStorage.getItem('userEmail');
   }
-}; 
+};
